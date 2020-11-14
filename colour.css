@@ -1,0 +1,23 @@
+
+body {
+background: #ffffff;
+}
+
+#header {
+color: #c3d1e1;
+background: #eef6ff;
+border-color: #eef6ff;
+}
+
+hr {
+border-color: #eef6ff;
+}
+
+.box {
+border-color: #c3d1e1;
+}
+
+table, th, td {
+border-color: #c3d1e1;
+}
+
