@@ -91,6 +91,10 @@ td {
   padding: 0.4em;
 }
 
+td.mid {
+  text-align: center;
+}
+
 @media (min-device-width: 480px) {
 
   .box {
