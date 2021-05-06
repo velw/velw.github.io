@@ -60,6 +60,15 @@ h5 {
   margin-bottom: 0.5em;
 }
 
+h4 {
+  margin-top: 1.7em;
+  margin-bottom: 0.8em;
+}
+
+h3 {
+  margin-top: 2em;
+}
+
 hr {
   border-top-style: solid;
   border-top-width: 0.5px;
