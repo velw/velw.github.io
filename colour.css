@@ -21,3 +21,22 @@ table, th, td {
 border-color: #c3d1e1;
 }
 
+.groceries_page em {
+color: #d62929;
+}
+
+#transcript_page_banner {
+  background-image: linear-gradient(to bottom, 
+                  rgba(255,255,255, 1) 96%, 
+                  rgba(255,255,255, 0) 100%);
+}
+
+@media (min-device-width: 480px) {
+
+  #transcript_page_banner {
+    background-image: linear-gradient(to bottom, 
+                      rgba(255,255,255, 1) 10.8em, 
+                      rgba(255,255,255, 0) 11.3em);
+  }
+
+}
