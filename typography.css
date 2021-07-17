@@ -63,3 +63,7 @@ font-style: normal;
 .transcript_text em {
 font-style: normal;
 }
+
+.transcript_name {
+font-weight: bold;
+}
