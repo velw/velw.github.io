@@ -15,7 +15,7 @@ div {
 
 a { white-space: nowrap } 
 
-#header {
+.header {
   margin: 0px;
   padding: 0px;
   border: 1px solid;
@@ -24,32 +24,32 @@ a { white-space: nowrap }
   margin-bottom: 3em;
 }
 
-#page {
+.page {
   width: 90%;
   position: relative;
   left: 5%;
 }
 
-#footer {
+.footer {
   width: 100%;
   margin-top: 8em;
   padding: 0px;
   font-size: 80%;
 }
 
-#footerTable {
+.footerTable {
   width: 90%;
   position: relative;
   left: 5%;
 }
 
-#footerDiv {
+.footerDiv {
   width: 90%;
   position: relative;
   left: 5%;
 }
 
-#headerText {
+.headerText {
   margin: 0px;
   padding-top: 0.4em;
   padding-bottom: 0.3em;
@@ -106,25 +106,23 @@ td.mid {
 
 
 
-#transcript_page_banner {
+.transcript_page_banner {
   margin: 0px;
   padding: 0px;
   border: 0px none;
   width: 100%;
-  position: fixed;
+  position: relative;
   top: 0px;
   left: 0px;
-  padding-bottom: 2.4em;
-  z-index: 1;
 }
 
-#transcript_page_title {
+.transcript_page_title {
   width: 90%;
   position: relative;
   left: 5%;
 }
 
-.yt_div {
+.transcript_page_video_container {
   border-width: 0px;
   border-style: none;
   text-align: center;
@@ -132,10 +130,10 @@ td.mid {
   width: 100%;
   padding-bottom: 0px;
   margin-bottom: 0px;
-  padding-top: 1em;
+  padding-top: 2em;
 }
 
-.yt_iframe {
+.transcript_page_video_iframe {
   vertical-align: bottom;
   height: 36vh;
   width: 64vh;
@@ -145,16 +143,16 @@ td.mid {
   margin-bottom: 0px;
 }
 
-.transcript_div {
+.transcript_text {
   border-width: 0px;
   border-style: none;
   position: relative;
   width: 90%;
   left: 5%;
-  margin-top: 56vh;
+  margin-top: 2em;
 }
 
-.transcript_div br {
+.transcript_text br {
   margin-bottom: 1em;
 }
 
@@ -166,26 +164,26 @@ td.mid {
     line-height: 1.8;
   }
 
-  #header {
+  .header {
     padding-left: 20%;
   }
 
-  #page {
+  .page {
     width: 60%;
     left: 20%;
   }
 
-  #footerTable {
+  .footerTable {
     width: 60%;
     left: 20%;
   }
 
-  #footerDiv {
+  .footerDiv {
     width: 60%;
     left: 20%;
   }
 
-  #footerFloatDivLeft {
+  .footerFloatDivLeft {
     width: 40%;
     float: left;
     margin-right: 1%;
@@ -193,7 +191,7 @@ td.mid {
     vertical-align: top;
   }
 
-  #footerFloatDivRight {
+  .footerFloatDivRight {
     width: 40%;
     float: right;
     margin-right: 1%;
@@ -226,26 +224,33 @@ td.mid {
     margin-left: 2.5%;
   }
 
-  #transcript_page_title {
-    width: 60%;
-    left: 20%;
+  .transcript_page_banner {
+    position: fixed;
+    padding-bottom: 2.4em;
+    z-index: 1;
   }
 
-  .yt_div {
-    width: 50%;
+  .transcript_page_title {
+    width: 60vw;
+    left: 20vw;
+  }
+
+  .transcript_page_video_container {
+    width: 45vw;
     text-align: left;
     padding-left: 5vw;
+    padding-top: 2em;    
   }
 
-  .yt_iframe {
+  .transcript_page_video_iframe {
     height: 23.9vw;
     width: 42.5vw;
   }
 
- .transcript_div {
-  width: 66%;
-  left: 57%;
-  margin-top: 11.2em;
+ .transcript_text {
+  width: 42.5vw;
+  left: 52.5vw;
+  margin-top: 12.2em;
  }
 
 }  /* End of desktop-only block */

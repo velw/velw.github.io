@@ -7,20 +7,20 @@ font-family: san-serif;
 font-size: 88%;
 }
 
-#header {
+.header {
 }
 
-#page {
+.page {
 }
 
-#footer {
+.footer {
 font-size: 80%;
 }
 
-#footerTable {
+.footerTable {
 }
 
-#headerText {
+.headerText {
 font-size: 140%;
 font-weight: bold;
 }
@@ -57,5 +57,9 @@ hr {
 }
 
 .groceries_page em {
+font-style: normal;
+}
+
+.transcript_text em {
 font-style: normal;
 }

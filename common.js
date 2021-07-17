@@ -1,16 +1,16 @@
 // alert("This alert box was called with the onload event");
 
 function writeHeader() {
-  document.write("<div id='headerText'>velw.github.io</div>");
+  document.write("<div class='headerText'>velw.github.io</div>");
 }
 
 function writeFooter(createdDateString) {
 
   document.write("<hr/>");
-  document.write("<div id='footerDiv'><div id='footerFloatDivLeft'>");
+  document.write("<div class='footerDiv'><div class='footerFloatDivLeft'>");
   writeFooterDatestamp(createdDateString);
   writeFooterStatcounter();
-  document.write("</div><div id='footerFloatDivRight'>Site created and maintained by velw<br /><br /><a href='..'>top</a></div></div><br style='clear:both' />");
+  document.write("</div><div class='footerFloatDivRight'>Site created and maintained by velw<br /><br /><a href='..'>up</a> &ensp; <a href='/'>top</a></div></div><br style='clear:both' />");
 
   writeFooterExternalAnchorRewriter()
 }

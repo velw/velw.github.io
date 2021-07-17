@@ -3,7 +3,7 @@ body {
 background: #ffffff;
 }
 
-#header {
+.header {
 color: #c3d1e1;
 background: #eef6ff;
 border-color: #eef6ff;
@@ -25,7 +25,12 @@ border-color: #c3d1e1;
 color: #d62929;
 }
 
-#transcript_page_banner {
+.transcript_text em {
+background-color: #f5edff ;
+color: #5618a4;
+}
+
+.transcript_page_banner {
   background-image: linear-gradient(to bottom, 
                   rgba(255,255,255, 1) 96%, 
                   rgba(255,255,255, 0) 100%);
@@ -33,10 +38,10 @@ color: #d62929;
 
 @media (min-device-width: 480px) {
 
-  #transcript_page_banner {
+  .transcript_page_banner {
     background-image: linear-gradient(to bottom, 
-                      rgba(255,255,255, 1) 10.8em, 
-                      rgba(255,255,255, 0) 11.3em);
+                      rgba(255,255,255, 1) 11.8em, 
+                      rgba(255,255,255, 0) 12.3em);
   }
 
 }
