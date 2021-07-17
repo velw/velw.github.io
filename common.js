@@ -10,7 +10,7 @@ function writeFooter(createdDateString) {
   document.write("<div class='footerDiv'><div class='footerFloatDivLeft'>");
   writeFooterDatestamp(createdDateString);
   writeFooterStatcounter();
-  document.write("</div><div class='footerFloatDivRight'>Site created and maintained by velw<br /><br /><a href='..'>up</a> &ensp; <a href='/'>top</a></div></div><br style='clear:both' />");
+  document.write("</div><div class='footerFloatDivRight'>Site created and maintained by velw<br /><br /><a href='javascript:history.back()'>back</a> &ensp; <a href='..'>up</a> &ensp; <a href='/'>top</a></div></div><br style='clear:both' />");
 
   writeFooterExternalAnchorRewriter()
 }
