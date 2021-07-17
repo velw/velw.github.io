@@ -67,7 +67,7 @@ function writeFooterExternalAnchorRewriter() {
   document.write("var anchors = document.getElementsByTagName('a'); ");
   document.write("for (i = 0; i < anchors.length; i++) { ");
   document.write("  var a = anchors[i]; ");
-  document.write("  if (a.host !== window.location.host) { ");
+  document.write("  if (a.host !== window.location.host) && (a.href !== 'javascript:history.back()') { ");
   document.write("   a.setAttribute('target', '_blank'); ");
   document.write("  } ");
   document.write("} ");
