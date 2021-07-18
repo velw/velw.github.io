@@ -45,7 +45,7 @@ function writeFooterDatestamp(createdDateString) {
 
 function writeFooterStatcounter() {
 
-  document.write("Visitors: ");
+  document.write("Site visitors: ");
   document.write("<!-- Default Statcounter code for velw.github.io  --> ");
   document.write("<script type='text/javascript'> ");
   document.write("var sc_project=12424074;  ");
@@ -67,7 +67,7 @@ function writeFooterExternalAnchorRewriter() {
   document.write("var anchors = document.getElementsByTagName('a'); ");
   document.write("for (i = 0; i < anchors.length; i++) { ");
   document.write("  var a = anchors[i]; ");
-  document.write("  if (a.host !== window.location.host) && (a.href !== 'javascript:history.back()') { ");
+  document.write("  if ((a.host !== window.location.host) && (a.href !== 'javascript:history.back()')) { ");
   document.write("   a.setAttribute('target', '_blank'); ");
   document.write("  } ");
   document.write("} ");
