@@ -32,7 +32,7 @@ a { white-space: nowrap }
 
 .footer {
   width: 100%;
-  margin-top: 8em;
+  margin-top: 6em;
   padding: 0px;
   font-size: 80%;
 }
@@ -55,23 +55,33 @@ a { white-space: nowrap }
   padding-bottom: 0.3em;
 }
 
+.boxTitle {
+
+}
+
 h5 {
-  margin-top: 0.5em;
+  margin-top: 2em;
   margin-bottom: 0.5em;
 }
 
 h4 {
-  margin-top: 1.7em;
+  margin-top: 2.5em;
   margin-bottom: 0.8em;
 }
 
 h3 {
-  margin-top: 2em;
+  margin-top: 2.5em;
 }
+
+h2 {
+  margin-top: 2.5em;
+}
+
+
 
 hr {
   border-top-style: solid;
-  border-top-width: 0.5px;
+  border-top-width: 0.8px;
   border-right: none;
   border-left: none;
   border-bottom: none;
@@ -139,8 +149,7 @@ td.mid {
   width: 64vh;
   border-width: 0px;
   border-style: none;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  padding-bottom: 0.5em;
 }
 
 .transcript_text {
@@ -155,6 +164,10 @@ td.mid {
 .transcript_text br {
   margin-bottom: 1em;
 }
+
+ .biopic {
+  width: 90vw;
+ }
 
 
 @media (min-device-width: 480px) {
@@ -236,10 +249,11 @@ td.mid {
   }
 
   .transcript_page_video_container {
+    position: fixed;
     width: 45vw;
     text-align: left;
     padding-left: 5vw;
-    padding-top: 2em;    
+    padding-top: 0em;    
   }
 
   .transcript_page_video_iframe {
@@ -251,6 +265,16 @@ td.mid {
   width: 42.5vw;
   left: 52.5vw;
   margin-top: 12.2em;
+ }
+
+ .biopic_container {
+  float: right;
+ }
+
+ .biopic {
+  width: 12vw;
+  padding-left: 2em;
+  padding-bottom: 2em;
  }
 
 }  /* End of desktop-only block */
