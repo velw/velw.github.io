@@ -2,102 +2,97 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
+<meta charset="utf-8" />
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+
+
 
 <script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="home.js"></script>
 <link rel="stylesheet" type="text/css" href="layout.css" media="screen, print"/>
 <link rel="stylesheet" type="text/css" href="typography.css" media="screen, print"/>
 <link rel="stylesheet" type="text/css" href="colour.css" media="screen"/>
 
 <title>home | velw.github.io</title> 
 </head>
-<body>
+<body onload="setRedirect(); startWorldClock();" onunload="clearRedirect()" >
 <div class="header">                      <!-- ********** start of header ********** -->
-<script>
-writeHeader();
-</script>
+  <script>
+    writeHeaderText();
+  </script>
 </div>                                 <!-- ********** end of header ********** -->
 
 <div class="page">                        <!-- ********** start of page ********** -->
-   <br /><br /><br />
 
-   <div class="box boxNarrow boxLeft">
-<div class="boxTitle">Top</div>
+<br />
+
+   <script>
+     writeBanner();
+   </script>
+
+<div class="box boxNarrow boxLeft boxColumn">
+   <div class="box boxInColumn">
+<div class="boxTitle">Focus</div>
+<a href="http://localhost:8081/priorities.html">Priorities</a> &ensp;
+<a href="http://localhost:8081/momentum.html">Momentum</a> &ensp;
 <a href="https://sheet.zoho.com/sheet/open/j75ur70bfbdb1733143f6b12f34858687c96d/">Readiness</a> &ensp;
-<a href="https://trello.com/b/2QP5F28R/tasks">To do</a> &ensp;
-<a href="">State</a> &ensp;
+<a href="http://localhost:8081/check-in.html">Check-in</a> &ensp;
+<a href="https://sheet.zoho.com/sheet/open/s9fk8c8d5161f10da4cd6959d474a391cd544?sheetid=1&range=A2">Schedule</a> &ensp; 
+
    </div>
 
+<div class="box boxInColumn">
+<div class="boxTitle">Spirit</div>
+<a href="https://www.drikpanchang.com/panchang/month-panchang.html">Panchang</a> &ensp;
+<a href="https://www.drikpanchang.com/muhurat/daily/do-ghati-muhurat.html">Muhurat</a> &ensp;
+<a href="https://aaps.space/">aaps</a> &ensp;
+<a href="https://komilla.com/planetary-news.html">Planetary news</a> &ensp;
+<a href="livekundali.html">Live kundali</a> &ensp;
+</div>
 
-    <div class="box boxWide boxRight">
-<div class="boxTitle">Study</div>
-<a href="https://sheet.zoho.com/sheet/open/k2pfj4b776b6849304f82acc3acae49e52d37?sheet=Schedule">Schedule/tracker</a>  &ensp; 
-<a href="https://trello.com/b/HF4hAz6Z/study">Plan (old)</a>  &ensp; 
-<a href="https://langcorrect.com/journal/">LangCorrect</a>  &ensp; 
-<a href="https://www.repetitionsapp.com/study">RepetitionsApp</a>  &ensp; 
-<a href="https://joyokanji.info/">常用漢字チェッカー</a>  &ensp; 
-   </div> 
 
-<div class="box boxNarrow boxLeft">
+<div class="box boxInColumn">
 <div class="boxTitle">Organiser</div>
-<a href="https://calendar.zoho.com/mycalendar">Schedule</a> &ensp; 
 <a href="https://notebook.zoho.com">Notebook</a> &ensp; 
-<a href="https://cronometer.com/#diary">Nutrition</a> &ensp;
-<a href="https://sheet.zoho.com">Spreadsheets</a> &ensp;
-</div>
-
-
-    <div class="box boxNarrow boxRight">
-<div class="boxTitle">Reading & listening materials</div>
-<a href="https://www4.nhk.or.jp/nradi/">Nらじ</a> &ensp;
-<a href="https://www4.nhk.or.jp/nhkjournal/">NHKジャーナル</a> &ensp;
-<a href="https://www.nikkei.com/theme/?dw=20030201">朝刊1面を読もう</a> &ensp;
-<a href="https://www.nhk.or.jp/kaisetsu-blog/100/">時論公論</a> &ensp; 
-<a href="https://www.nhk.or.jp/kaisetsu-blog/400/">視点・論点</a> &ensp; 
-<a href="https://www.nhk.or.jp/radio/ondemand/detail.html?p=0971_01">朗読 (聴逃)</a> &ensp; 
-<a href="http://www.radionikkei.jp/hondana/">聴く本棚</a> &ensp; 
-<a href="https://www.nhk.or.jp/radio/ondemand/detail.html?p=0812_01">日曜討論 (聴逃)</a> &ensp; 
-<a href="https://www.google.com/search?q=%E5%9B%BD%E4%BC%9A%E4%B8%AD%E7%B6%99%E3%80%80site:youtube.com&tbs=qdr:w">国会中継</a> &ensp; 
-<a href="https://www.youtube.com/channel/UC-uJ9TMQusn-cpIklh-S-5A">石垣のりこ</a> &ensp; 
-<a href="https://www.nhk.or.jp/school/program/">NHK for School</a> &ensp;
-<a href="https://www.nhk.or.jp/school/syakai/mieruzo/">見えるぞ！ニッポン　（小学校3-4年）</a> &ensp;
-<a href="https://www.nhk.or.jp/school/syakai/dokiri/">歴史にドキリ　（小学校6年）</a> &ensp;
-<a href="https://www.nhk.or.jp/kokokoza/">NHK高校講座</a> &ensp;
-<a href="bdm/">黒い砂漠モバイル</a> &ensp; 
-<a href="https://jp.finalfantasyxiv.com/blog/">FFXIV official blog</a> &ensp; 
-<a href="https://jp.finalfantasyxiv.com/lodestone/news/">Lodestone</a> &ensp; 
-<a href="https://twitter.com/Chicory_W/">チコリー</a> &ensp; 
-   </div> 
-
-
-<div class="box boxNarrow boxRight boxMidRight">
-<div class="boxTitle">Focus</div>
-<a href="../offline/whoami.html">Who am I?</a> &ensp; 
-<a href="../offline/thoughts.txt">Thoughts</a> (<a href="../offline/thoughts_archive/">archive</a>) &ensp; 
-<a href="https://hypothes.is">Research</a>  &ensp; 
-<a href="../offline/draft notes/">Drafts</a> &ensp; 
-<a href="notes/">Notes</a> &ensp; 
-   </div> 
-
-
-<div class="box boxNarrow boxLeft"> 
-<div class="boxTitle">Internet</div>
-<a href="http://192.168.100.1/html/firewallswitch.htm">Firewall</a> &ensp;
+<a href="http://localhost:8081/thoughts_archive/">Recipes</a>  &ensp; 
+<a href="https://cronometer.com/#diary">Nutrition log</a> &ensp;
+<a href="http://localhost:8081/thoughts_archive/">Thoughts archive</a> &ensp; 
 <a href="https://app.raindrop.io/my/8211817">URL clipper</a>  &ensp; 
-<a href="https://www.whatsmyip.org/">Network tools</a> &ensp; 
-<a href="https://iplocation.com/">IP Location</a> &ensp; 
-<a href="https://subsyncer.com/">Subtitle tools</a> &ensp; 
-<a href="https://imagecolorpicker.com">Colour picker</a> &ensp; 
-<a href="https://twitter.com/search/">Twitter Search</a> &ensp; 
-<a href="https://buffer.com/">Buffer</a> &ensp; 
-<a href="https://www.youtube.com/feed/history">YouTube history</a> &ensp; 
-<a href="https://feedly.com/i/my">Feeds</a> &ensp;
-<a href="https://emojipedia.org">Emojipedia</a> &ensp; 
-<a href="https://discord.com">Discord</a> &ensp;
+<a href="https://hypothes.is">Research</a>  &ensp; 
+<a href="http://localhost:8081/draft notes/">Draft notes</a> &ensp; 
+<a href="notes/">Notes</a> &ensp; 
+
 </div>
 
 
-<div class="box boxNarrow boxLeft boxMidLeft">
+</div>
+
+<div class="box boxNarrow boxLeft boxMid boxColumn">
+    <div class="box boxInColumn">
+<div class="boxTitle">Language study</div>
+<a href="japanese.html">Japanese</a>  &ensp; 
+<a href="hindi.html">Hindi</a>  &ensp; 
+<a href="sanskrit.html">Sanskrit</a>  &ensp; 
+   </div> 
+
+  <div class="box boxInColumn">
+  <div class="boxTitle">World clock</div>
+  <span class="worldClockLabel">Tokyo</span>: <span class="worldClockTime" id="tokyo"></span><br />
+  <span class="worldClockLabel">New Delhi</span>: <span class="worldClockTime" id="newdelhi"></span><br />
+  <span class="worldClockLabel">London</span>: <span class="worldClockTime" id="london"></span><br />
+  <span class="worldClockLabel">Washington</span>: <span class="worldClockTime" id="washington"></span><br />
+  <span class="worldClockLabel">San Francisco</span>: <span class="worldClockTime" id="sanfrancisco"></span><br />
+  </div>
+
+
+
+</div>
+
+
+<div class="box boxNarrow boxRight boxColumn">
+
+
+<div class="box boxInColumn">
 <div class="boxTitle">News</div>
 <a href="http://www.nhk.or.jp/radionews/">NHKラジオニュース</a> &ensp; 
 <a href="https://www.bbc.co.uk/programmes/p002vsmz/episodes/player">BBC News</a> &ensp; 
@@ -110,29 +105,12 @@ writeHeader();
 <a href="https://www.youtube.com/c/abcch6/videos">ABC</a> &ensp;
 <a href="https://www.youtube.com/c/tvtokyonews/videos">テレ東BIZ</a> &ensp;
 <a href="https://www3.nhk.or.jp/news/">NHKニュース</a> &ensp; 
+<a href="https://www.data.jma.go.jp/multi/quake/index.html?lang=jp">気象庁 地震情報</a> &ensp; 
 </div>
 
-
-
-    <div class="box boxNarrow boxRight">
-<div class="boxTitle">Stroke order diagrams</div>
-<a href="https://commons.wikimedia.org/wiki/Commons:Stroke_Order_Project/Kangxi_radicals">Stroke Order Project</a> &ensp; 
-<a href="https://www.google.co.jp/search?q=右+site%3Anihongoichiban.com">Nihongo Ichiban search</a> &ensp;
-<a href="https://kakijun.jp/m-s/ms_kensakupage.html">書き順.jp モバイル版</a> &ensp;
-<a href="http://kakijun.com/">書き順.com</a> &ensp;
-<a href="https://kanji.quus.net/">quus.net</a> &ensp;
-   </div> 
-<div class="box boxNarrow boxLeft">
-<div class="boxTitle">黒い砂漠モバイル</div>
-<a href="bdm/">Notes</a>
-<a href="https://kuraha.com/">倉葉の黒い砂漠ブログ</a>
-<a href="https://etemity.hatenablog.com/">黒い砂漠の永遠</a>
-<a href="https://mottimotiblog.com/">もっちもちブログ</a>
-</div>
-
-<div class="box boxNarrow boxMidRight boxRight">
+<div class="box boxInColumn">
 <div class="boxTitle">Supplies</div>
-<a href="groceries.html">Groceries</a> &ensp; 
+<a href="http://localhost:8081/groceries.html">Groceries</a> &ensp; 
 <a href="https://www.iy-net.jp/">イトーヨーカドー</a> &ensp; 
 <a href="https://sm.rakuten.co.jp/">Rakuten Seiyu</a> &ensp; 
 <a href="https://www.seijoishii.com/">成城石井</a> &ensp; 
@@ -141,28 +119,39 @@ writeHeader();
 <a href="https://demae-can.com">出前館</a> &ensp;
 </div>
 
-
-
-
-
-
-
-
-<div class="box boxWide boxLeft">
-<div class="boxTitle">Translation</div>
-<a href="https://jisho.org/">Jisho</a> &ensp; 
-<a href="https://kanji.jitenon.jp/">漢字辞典</a> &ensp; 
-<a href="https://www.linguee.jp/日本語-英語/">Linguee</a> &ensp; 
-<a href="https://ejje.weblio.jp/sentence">Weblio例文検索</a> &ensp; 
-<a href="https://www.weblio.jp/">Weblio辞書</a> &ensp; 
-<a href="https://thesaurus.weblio.jp/">Weblio類語辞典</a> &ensp; 
-<a href="https://dic.pixiv.net">ピクシブ百科事典</a> &ensp; 
-<a href="https://proverb-encyclopedia.com">ことわざ・慣用句</a> &ensp; 
-<a href="https://www.yellowbridge.com/chinese/character-dictionary.php">Yellowbridge character search</a> &ensp; 
-<a href="https://translate.google.com">Google Translate</a> &ensp; 
-<a href="http://wwwjdic.biz/cgi-bin/wwwjdic?9T=">WWWJDIC Text Glossing</a> &ensp; 
+<div class="box boxInColumn">
+<div class="boxTitle">Sanctuary</div>
+<a href="https://www.hotstar.com/in/tv/mahabharat/435">Mahabharat</a>
+<a href="https://www.jiocinema.com/tv-shows/lakshmi-narayan/3942612">Lakshmi Narayan</a>
+<a href="https://www.hotstar.com/in/shows/mahadev/12">Devon Ke Dev Mahadev</a>
+<a href="https://twitter.com/search?q=%E0%A4%86%E0%A4%9C%20%E0%A4%95%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B0%E0%A4%95%20%E0%A4%B5%E0%A4%BF%E0%A4%9A%E0%A4%BE%E0%A4%B0%20&src=typed_query&f=live">आज का प्रेरक विचार </a>
 </div>
-<div class="box boxNarrow boxRight">
+
+</div>
+
+<br clear="left" />
+
+  <div class="box boxLeft boxWide"> 
+    <div class="boxTitle">Internet</div>
+<a href="https://mas.to/">Mas.to</a> &ensp; 
+<a href="https://insacret.com/">Insacret</a> &ensp;
+<a href="https://buffer.com/">Buffer</a> &ensp; 
+<a href="https://www.youtube.com/feed/history">YouTube history</a> &ensp; 
+<a href="https://emojipedia.org">Emojipedia</a> &ensp;
+<a href="https://www.whatsmyip.org/">Network tools</a> &ensp; 
+<a href="https://iplocation.com/">IP Location</a> &ensp; 
+<a href="https://imagecolorpicker.com">Colour picker</a> &ensp; 
+<a href="https://subsyncer.com/">Subtitle tools</a> &ensp; 
+<a href="https://sheet.zoho.com">Spreadsheets</a> &ensp;
+<a href="https://twitter.com/search/">Twitter Search</a> &ensp; 
+<a href="https://feedly.com/i/my">Feeds</a> &ensp;
+ <a href="https://discord.com">Discord</a> &ensp;
+  </div>
+
+<br clear="both" />
+
+
+<div class="box boxNarrow boxLeft">
 <div class="boxTitle">Editing</div>
 <a href="https://dictionary.cambridge.org/dictionary/english">Cambridge English Dictionary</a> &ensp; 
 <a href="https://www.merriam-webster.com">Merriam-Webster</a> &ensp; 
@@ -171,17 +160,20 @@ writeHeader();
 <a href="https://www.compart.com/en/unicode/U+2014">Em dash</a> &ensp; 
 <a href="https://www.compart.com/en/unicode/U+2026">Ellipsis</a> &ensp; 
 <a href="https://www.nyse.com/markets/hours-calendars">NYSE Holidays</a> &ensp; 
-
+<a href="https://www.jpx.co.jp/english/corporate/about-jpx/calendar/index.html">TSE Holidays</a> &ensp; 
 </div>
 
-<div class="box boxNarrow boxRight boxMidRight">
-<div class="boxTitle">Style</div>
+<div class="box boxNarrow boxLeft boxMid">
+<div class="boxTitle">Stylebooks</div>
 <a href="https://www.apstylebook.com/">AP</a> &ensp; 
 <a href="https://www.chicagomanualofstyle.org/">Chicago</a> &ensp; 
 <a href="https://apastyle.apa.org/">APA</a> &ensp; 
 <a href="https://www.scientificstyleandformat.org">CSE</a> &ensp; 
 <a href="https://style.mla.org/">MLA</a> &ensp; 
 </div>
+
+
+
 
 <!--
 
@@ -223,7 +215,7 @@ writeHeader();
 
 <br style="clear: both"/>
 <!--
-<div class="box boxWide boxRight">
+<div class="box boxWideRight">
 <div class="boxTitle">Fun</div><a href="bdm/">黒い砂漠モバイル</a> &ensp; <a href="test.txt">test</a> &ensp; 
 </div>
 
@@ -231,7 +223,7 @@ writeHeader();
 <br style="clear: both"/>
 
 
-<div class="box boxWide boxRight">
+<div class="box boxWideRight">
 
 <div class="boxTitle">Interesting things</div>
 <div><b>?:</b>
@@ -250,7 +242,7 @@ stuff
 <div class="box boxNarrow boxRight">
 <div class="boxTitle">Computing</div><a href="https://www.whatsmyip.org/">Network tools</a> &ensp; <a href="https://iplocation.com/">IP Location</a>
 </div>
-<div class="box boxNarrow boxRight boxMidRight">
+<div class="box boxNarrow boxRight boxMid">
 <div class="boxTitle">Computing 2</div><a href="https://www.whatsmyip.org/">Network tools</a> &ensp; <a href="https://iplocation.com/">IP Location</a>
 </div>
 
@@ -276,7 +268,7 @@ stuff
 <div class="box boxNarrow boxLeft">
 <div class="boxTitle">Computing</div><a href="https://www.whatsmyip.org/">Network tools</a> &ensp; <a href="https://iplocation.com/">IP Location</a>
 </div>
-<div class="box boxNarrow boxLeft boxMidLeft">
+<div class="box boxNarrow boxLeft boxMid">
 <div class="boxTitle">Computing 2</div><a href="https://www.whatsmyip.org/">Network tools</a> &ensp; <a href="https://iplocation.com/">IP Location</a>
 </div>
 

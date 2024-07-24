@@ -3,8 +3,14 @@ html {
 }
 
 body {
-font-family: san-serif;
+font-family:  Meiryo, Segoe UI, sans-serif;
 font-size: 88%;
+}
+
+pre {
+font-size: 124%;
+white-space: pre-wrap;
+font-weight: bold;
 }
 
 .header {
@@ -31,13 +37,13 @@ font-weight: bold;
 }
 
 h2 {
-font-size:154%;
-font-weight: bold;
+font-size:158%;
+font-weight: normal;
 text-decoration: underline;
 }
 
 h3 {
-font-size:138%;
+font-size:142%;
 font-weight: bold;
 
 }
@@ -61,14 +67,25 @@ font-weight: bold;
 hr {
 }
 
-.groceries_page em {
+em {
 font-style: normal;
+font-weight: bold;
+text-decoration: underline;
 }
 
-.transcript_text em {
-font-style: normal;
-}
 
 .transcript_name {
 font-weight: bold;
+}
+
+.ipa_symbol {
+font-size: 180%;
+}
+
+.ipa_description {
+font-size: 70%;
+}
+
+td {
+text-align: center
 }

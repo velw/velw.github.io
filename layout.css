@@ -13,7 +13,9 @@ div {
   box-sizing: border-box;
 }
 
-a { white-space: nowrap } 
+a { /* white-space: nowrap;    // Not sure why this was here */
+
+} 
 
 .header {
   margin: 0px;
@@ -21,13 +23,14 @@ a { white-space: nowrap }
   border: 1px solid;
   width: 100%;
   padding-left: 5%;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 
 .page {
   width: 90%;
   position: relative;
   left: 5%;
+  padding-top: 0em;
 }
 
 .footer {
@@ -65,7 +68,7 @@ h5 {
 }
 
 h4 {
-  margin-top: 2.5em;
+  margin-top: 0.5em;
   margin-bottom: 0.8em;
 }
 
@@ -77,7 +80,9 @@ h2 {
   margin-top: 2.5em;
 }
 
-
+h1 {
+  margin-top:0em;
+}
 
 hr {
   border-top-style: solid;
@@ -95,11 +100,34 @@ hr {
   padding: 1.2em;
   padding-bottom: 1.0em;
   padding-top: 0.8em;
-  width: 96%;
   margin-left: 0%;
   margin-right: 0%;
   margin-bottom: 1.8em;
 }
+
+.boxColumn {
+  border-style: none;
+  padding: 0em;
+  margin: 0%;
+}
+
+.boxInColumn {
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.boxBanner {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  width: 100%;
+  text-align: center;
+}
+
+.boxPageTitle {
+  border-style: none;
+}
+
 
 table, th, td {
   border-width: 0.5px;
@@ -114,7 +142,10 @@ td.mid {
   text-align: center;
 }
 
-
+li {
+  margin-bottom:0.3em;
+  list-style-position: inside;
+}
 
 .transcript_page_banner {
   margin: 0px;
@@ -169,12 +200,18 @@ td.mid {
   width: 90vw;
  }
 
-li {
-  margin-bottom:0.3em;
- }
+
+
+.localOnly {
+  display: none;
+}
 
 @media (min-device-width: 480px) {
   /* For desktop: */
+
+li {
+  margin-bottom: 1.2em;
+}
 
   .box {
     line-height: 1.8;
@@ -187,6 +224,11 @@ li {
   .page {
     width: 60%;
     left: 20%;
+    padding-top: 4em;
+  }
+
+  h4 {
+    margin-top: 2.5em;
   }
 
   .footerTable {
@@ -216,29 +258,32 @@ li {
   }
 
   .boxNarrow {
-    width: 31%;
-  }
-
-  .boxWide {
-    width: 65.5%;
+    width: 32%;
   }
 
   .boxLeft {
     float: left;
-    margin-right: 1%;
+    margin-right: 2%;
   }
 
-  .boxRight {
+ .boxRight {
     float: right;
-    margin-left: 1%;
+    margin-left: 2%;
   }
 
-  .boxMidRight {
-    margin-right: 2.5%;
+  .boxWide {
+    width: 66%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
-  .boxMidLeft {
-    margin-left: 2.5%;
+
+  /* add this one last so that zero margins overwrite earlier margin definitions */
+  .boxMid {
+    width: 32%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
+
 
   .transcript_page_banner {
     position: fixed;
@@ -267,7 +312,7 @@ li {
  .transcript_text {
   width: 42.5vw;
   left: 52.5vw;
-  margin-top: 12.2em;
+  margin-top: 13.2em;     /* Adjust distance from top of page here */
  }
 
  .biopic_container {

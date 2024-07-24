@@ -15,10 +15,20 @@ border-color: #eef6ff;
 
 .box {
 border-color: #c3d1e1;
+background-clip: margin-box;
+/* background-color: blue; */
+}
+
+.boxPageTitle {
+color: #929da8;
 }
 
 table, th, td {
 border-color: #c3d1e1;
+}
+
+em {
+/* color: #6b1414; */
 }
 
 .groceries_page em {

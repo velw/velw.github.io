@@ -1,76 +1,122 @@
 // alert("This alert box was called with the onload event");
 
-function writeHeader() {
+function writeHeaderText() {
   document.write("<div class='headerText'>velw.github.io</div>");
 }
 
 function writeFooter(createdDateString) {
 
+  revealLocalContent();
+
   document.write("<hr/>");
   document.write("<div class='footerDiv'><div class='footerFloatDivLeft'>");
-  writeFooterDatestamp(createdDateString);
-  writeFooterStatcounter();
-  document.write("</div><div class='footerFloatDivRight'>Site created and maintained by velw<br /><br /><a href='javascript:history.back()'>back</a> &ensp; <a href='..'>up</a> &ensp; <a href='/'>top</a></div></div><br style='clear:both' />");
 
-  writeFooterExternalAnchorRewriter()
-}
-
-function writeFooterDatestamp(createdDateString) {
-
+  // Datestamps
   document.write("Last updated: ");
   document.write("<script type='text/javascript'> ");
-  document.write("updated = new Date(document.lastModified); ");
-  document.write("theMonth = updated.toLocaleString('default', { month: 'long' }); ");
-  document.write("theDate = updated.getDate(); ");
-  document.write("theYear = updated.getFullYear(); ");
-
-  document.write("dateSuffix = 'th'; ");
-  document.write("textDate = ' ' + theDate; ");
-  document.write("dateLastDigit = textDate.substr(textDate.length-1, textDate.length); ");
-  document.write("if (dateLastDigit==='1') { ");
-  document.write("  dateSuffix = 'st'; ");
-  document.write("} else if (dateLastDigit==='2') { ");
-  document.write("  dateSuffix = 'nd'; ");
-  document.write("} else if (dateLastDigit==='3') { ");
-  document.write("  dateSuffix = 'rd'; ");
-  document.write("} ");
-
-  document.write("document.write(theDate + dateSuffix + ' ' + theMonth + ', ' + theYear); ");
+  document.write("  document.write(getLastModifiedDateString()); ");
   document.write("</script><br /> ");
-
   document.write("Created: " + createdDateString + "<br />");
 
+  writeFooterStatcounter();
+
+  document.write("</div><div class='footerFloatDivRight'>Site created and maintained by velw<br /><br />");
+  document.write("<a href='javascript:history.back()'>back</a> &ensp; <a href='..'>up</a> &ensp; ");
+  document.write("<a href='/'>top</a></div></div><br style='clear:both' />");
+
+  rewriteExternalAnchors();
+  rewriteReferenceAnchors();
+
 }
 
 
-function writeFooterStatcounter() {
 
-  document.write("Site visitors: ");
-  document.write("<!-- Default Statcounter code for velw.github.io  --> ");
-  document.write("<script type='text/javascript'> ");
-  document.write("var sc_project=12424074;  ");
-  document.write("var sc_invisible=0;  ");
-  document.write("var sc_security='3b333f99';  ");
-  document.write("var sc_text=2;  ");
-  document.write("var scJsHost = 'https://'; ");
+function getLastModifiedDateString() {
 
-  document.write("document.write(\"<sc\"+\"ript type='text/javascript' src='\" + ");
-  document.write("scJsHost+");
-  document.write("\"statcounter.com/counter/counter.js'></\"+\"script>\"); ");
-  document.write("</script> ");
-  document.write("<!-- End of Statcounter Code --> ");
+  var updated = new Date(document.lastModified);
+  var theMonth = updated.toLocaleString('default', { month: 'long' });
+  var theDate = updated.getDate(); 
+  var theYear = updated.getFullYear(); 
+
+  var dateSuffix = 'th'; 
+  var textDate = ' ' + theDate; 
+  var dateLastDigit = textDate.substr(textDate.length-1, textDate.length); 
+
+  if (dateLastDigit==='1') {
+    dateSuffix = 'st'; 
+  } else if (dateLastDigit==='2') { 
+    dateSuffix = 'nd'; 
+  } else if (dateLastDigit==='3') { 
+  dateSuffix = 'rd'; 
+  } 
+
+  return(theDate + dateSuffix + ' ' + theMonth + ', ' + theYear); 
 }
 
-function writeFooterExternalAnchorRewriter() {
+// Global variables for Statcounter
+  var sc_project=12424074;  
+  var sc_invisible=0;  
+  var sc_security='3b333f99';  
+  var sc_text=2;  
+  var scJsHost = 'https://'; 
 
-  document.write("<script type='text/javascript'> ");
-  document.write("var anchors = document.getElementsByTagName('a'); ");
-  document.write("for (i = 0; i < anchors.length; i++) { ");
-  document.write("  var a = anchors[i]; ");
-  document.write("  if ((a.host !== window.location.host) && (a.href !== 'javascript:history.back()')) { ");
-  document.write("   a.setAttribute('target', '_blank'); ");
-  document.write("  } ");
-  document.write("} ");
-  document.write("</script> ");
+function writeFooterStatcounter() {     
+
+// To do: change this (adjust values of statcounter global variables? and change "Site visitors" to "Page visitors"?) so it writes
+// page-specific code for certain pages
+
+  if (!hostIsLocal()) {
+    document.write("Site visitors: <script type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></ script>");
+  }
+
+}
+
+function rewriteExternalAnchors() {
+
+  var anchors = document.getElementsByTagName('a'); 
+  for (i = 0; i < anchors.length; i++) { 
+    var a = anchors[i]; 
+    //if ((a.host !== window.location.host) && (a.href !== 'javascript:history.back()')) { 
+    if ((a.host !== window.location.host) && (a.href !== 'javascript:history.back()') && (a.href.indexOf('livekundali.html') < 0 )) { 
+     a.setAttribute('target', '_blank'); 
+    } 
+  } 
+
+}
+
+function rewriteReferenceAnchors() {
+
+  var anchors = document.getElementsByTagName('a'); 
+  for (i = 0; i < anchors.length; i++) { 
+    var a = anchors[i]; 
+    if ((a.host == window.location.host) && (a.href.indexOf('#references') > -1)) { 
+     var refDiv = document.getElementById(a.hash.substring(1)); 
+     a.setAttribute('title', refDiv.textContent); 
+    } 
+  } 
+
+}
+
+function revealLocalContent() {
+
+  if (hostIsLocal) {
+    var elems = document.getElementsByClassName('localOnly'); 
+    for (i = 0; i < elems.length; i++) { 
+      var e = elems[i]; 
+      e.style.display = 'initial'; 
+    } 
+  }
+
+}
+
+function hostIsLocal() {
+
+  if (window.location.host.indexOf('localhost') > -1) {          // running on a local web server
+    return true;
+  } else if (window.location.protocol.indexOf('file:') > -1) {     // running from the file system
+    return true;
+  } else {
+    return false;
+  }
 
 }
