@@ -66,7 +66,7 @@ function writeFooterStatcounter() {
 // page-specific code for certain pages
 
   if (!hostIsLocal()) {
-    document.write("Site visitors: <script type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></ script>");
+    document.write("Site visitors: <script type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></" + "script>");
   }
 
 }
