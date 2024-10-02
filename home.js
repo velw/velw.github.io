@@ -38,6 +38,9 @@ function setRedirect() {
 function writeBanner() {
 
   var messages = [     // note, no comma after the last one!
+    'Only light can banish darkness &#x1FA94;',
+    'Only light can banish darkness &#x1FA94;',
+    'Only light can banish darkness &#x1FA94;',
     'Where is your attention?',
     'Where is your attention?',
     'Where is your attention?',
