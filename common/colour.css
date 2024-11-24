@@ -46,6 +46,10 @@ color: #5618a4;
                   rgba(255,255,255, 0) 100%);
 }
 
+.localOnly {
+  color: #b30030;
+}
+
 @media (min-device-width: 480px) {
 
   .transcript_page_banner {
