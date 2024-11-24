@@ -143,8 +143,17 @@ td.mid {
 }
 
 li {
-  margin-bottom:0.3em;
-  list-style-position: inside;
+  margin-bottom:1.2em;
+  /* list-style-position: inside; */
+}
+
+li ul {
+  margin-top:1.2em;
+  margin-bottom:2.6em;
+}
+
+li ul li ul {
+  margin-bottom:1.2em;
 }
 
 .transcript_page_banner {
@@ -208,6 +217,18 @@ li {
 
 @media (min-device-width: 480px) {
   /* For desktop: */
+
+div.svgBoxRight {
+  margin: 0em;
+  width: 50%; 
+  float: right;
+}
+
+div.svgBoxLeft {
+  margin: 0em;
+  width: 50%; 
+  float: left;
+}
 
 li {
   margin-bottom: 1.2em;
