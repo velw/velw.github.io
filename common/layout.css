@@ -93,6 +93,7 @@ hr {
   clear: both;
 }
 
+
 .box {
   line-height: 2.4;
   border-style: solid;
@@ -294,6 +295,12 @@ li {
 
   .boxWide {
     width: 66%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .boxFull {
+    width: 100%;
     margin-left: 0%;
     margin-right: 0%;
   }

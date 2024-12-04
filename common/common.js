@@ -2,6 +2,18 @@
 
 function writeHeaderText() {
   document.write("<div class='headerText'>velw.github.io</div>");
+
+  writePageTitle();
+}
+
+// ********** Note: If updating this function, update astrolib.js as well to adjust the title of the kundali page **********
+function writePageTitle() {    
+
+  if (window.location.host.indexOf('localhost:8081') > -1) {            
+    document.title = document.title + " journal (private)";
+  } else {
+    document.title = document.title + " velw.github.io";
+  }
 }
 
 function writeFooter(createdDateString) {

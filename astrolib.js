@@ -39,6 +39,7 @@ Graphics:
 
 ******************************************************************************************************* */
 
+
 var fullDebug = false;
 var isSidereal = true;
 var drawPhases = true; // false; // true;
@@ -3401,7 +3402,17 @@ var sky;
 function init() {
   creation();
   addEventListener('resize', creation);
+
+  if (window.location.host.indexOf('localhost:8081') > -1) {
+    document.title = document.title + " journal (private)";
+  } else {
+    document.title = document.title + " velw.github.io";
+  }
+
 }
+
+
+
 
 function creation() {
     canvas = document.getElementById("akash");
